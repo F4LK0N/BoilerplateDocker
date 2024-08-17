@@ -1,4 +1,4 @@
-FROM alpine:3.19
+FROM alpine:3.20
 LABEL "org.opencontainers.image.authors"="F4LK0N"
 LABEL "org.opencontainers.image.version"="1.0"
 
@@ -13,7 +13,7 @@ ENV ROOT_LOGS="/logs"
 
 ### OS ###
 ENV ENV="/root/.ashrc"
-ENV OS_VERSION="3.19"
+ENV OS_VERSION="3.20"
 ENV OS_APK_MIRROR="https://mirror.uepg.br/alpine"
 ENV OS_TIMEZONE="America/Sao_Paulo"
 ENV OS_DATA="${ROOT_DATA}/os"
@@ -65,10 +65,8 @@ RUN set -eux; \
 
 ### IMPORT ###
 # Shell
-COPY --chmod=755 --from=f4lk0n/fkn:data "/data/shell/latest/.ashrc" "/root/.ashrc"
-# Adm
-COPY --chmod=755 --from=f4lk0n/fkn:data "/data/adm/latest/sh/*" "/usr/local/bin/"
-# Entrypoint
+COPY --chmod=755 "./root/.ashrc" "/root/.ashrc"
+# Adm && Entrypoint
 COPY --chmod=755 "./usr/local/bin/*" "/usr/local/bin/"
 
 #########################################################################################################################

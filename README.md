@@ -37,9 +37,9 @@ docker compose up -d --build
 ```
 ### Access
 ```bash
-docker compose exec -it alpine /bin/sh
+docker compose exec -it php8.2 /bin/sh
 ```
 ### Logs
 ```bash
-docker compose logs alpine
+docker compose logs php8.2
 ```

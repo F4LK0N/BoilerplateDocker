@@ -1,8 +1,8 @@
 services:
-  php:
+  php8.2:
     image: f4lk0n/fkn:alpine3.20-apache2.4-php8.2
     container_name: ${COMPOSE_PREFIX}php8.2
-    hostname: php
+    hostname: php8.2
     build:
       context: ./.docker/php
     networks:
@@ -14,7 +14,7 @@ services:
     #  - "hostPort:containerPort"
     volumes:
       # Container
-      - ./.docker/alpine/usr/local/bin/:/usr/local/bin/
+      - ./.docker/php/usr/local/bin/:/usr/local/bin/
       # Data
       - ./data/:/data/
       # Logs

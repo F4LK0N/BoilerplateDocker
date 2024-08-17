@@ -48,13 +48,3 @@ https://mirrors.alpinelinux.org/
 https://mirror.uepg.br/alpine/
 https://mirror.uepg.br/alpine/v3.17/main/
 https://mirror.uepg.br/alpine/v3.17/community/
-
-
-
-
-
-# Phalcon Version
-php -r "echo Phalcon\Version::get();"
-
-
-https://blog.victor.com.au/php-phalcon-version-check/

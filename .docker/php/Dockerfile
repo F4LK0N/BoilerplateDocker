@@ -129,12 +129,8 @@ RUN set -eux; \
 ### IMPORT ###
 # Shell
 COPY --chmod=755 "./root/.ashrc" "/root/.ashrc"
-# Adm && Entrypoint
+# Adm && Entrypoint && Composer
 COPY --chmod=755 "./usr/local/bin/*" "/usr/local/bin/"
-
-# Composer
-COPY --from=f4lk0n/fkn:data "/data/composer/latest/composer" "/usr/local/bin/composer"
-
 # Apache
 COPY ".docker/php/.${HTTPD_CONF}" "${HTTPD_CONF}"
 COPY ".docker/php/.${HTTPD_CONF}-DEV" "${HTTPD_CONF}-DEV"

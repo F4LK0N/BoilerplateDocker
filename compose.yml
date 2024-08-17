@@ -10,8 +10,12 @@ services:
         ipv4_address: 189.17.17.82
       frontend:
         ipv4_address: 189.11.11.82
-    #ports:
-    #  - "hostPort:containerPort"
+    ports:
+      # Web Server
+      - "80:80"
+      - "443:443"
+      # XDebug
+      - "10000:10000"
     volumes:
       # Container
       - ./.docker/php/usr/local/bin/:/usr/local/bin/

@@ -7,9 +7,9 @@ services:
       context: ./.docker/php
     networks:
       backend:
-        ipv4_address: 189.17.17.20
+        ipv4_address: 189.17.17.21
       frontend:
-        ipv4_address: 189.11.11.20
+        ipv4_address: 189.11.11.21
     #ports:
     #  - "hostPort:containerPort"
     volumes:

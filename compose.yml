@@ -1,5 +1,5 @@
 services:
-  alpine:
+  alpine3.19:
     image: f4lk0n/fkn:alpine3.19
     container_name: ${COMPOSE_PREFIX}alpine3.19
     hostname: alpine
@@ -7,9 +7,9 @@ services:
       context: ./.docker/alpine
     networks:
       backend:
-        ipv4_address: 172.20.0.20
+        ipv4_address: 189.17.17.19
       frontend:
-        ipv4_address: 172.21.0.20
+        ipv4_address: 189.11.11.19
     #ports:
     #  - "hostPort:containerPort"
     volumes:
@@ -29,8 +29,8 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.20.0.0/16
-          gateway: 172.20.0.1
+        - subnet: 189.17.17.0/24
+          gateway: 189.17.17.1
   frontend:
     driver: bridge
     name: ${COMPOSE_PREFIX}frontend
@@ -38,5 +38,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 172.21.0.0/16
-          gateway: 172.21.0.1
+        - subnet: 189.11.11.0/24
+          gateway: 189.11.11.1

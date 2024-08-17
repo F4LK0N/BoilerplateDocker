@@ -132,15 +132,15 @@ COPY --chmod=755 "./root/.ashrc" "/root/.ashrc"
 # Adm && Entrypoint && Composer
 COPY --chmod=755 "./usr/local/bin/*" "/usr/local/bin/"
 # Apache
-COPY ".docker/php/.${HTTPD_CONF}" "${HTTPD_CONF}"
-COPY ".docker/php/.${HTTPD_CONF}-DEV" "${HTTPD_CONF}-DEV"
-COPY ".docker/php/.${HTTPD_CONF}-STAG" "${HTTPD_CONF}-STAG"
-COPY ".docker/php/.${HTTPD_CONF}-PROD" "${HTTPD_CONF}-PROD"
+COPY ".${HTTPD_CONF}" "${HTTPD_CONF}"
+COPY ".${HTTPD_CONF}-DEV" "${HTTPD_CONF}-DEV"
+COPY ".${HTTPD_CONF}-STAG" "${HTTPD_CONF}-STAG"
+COPY ".${HTTPD_CONF}-PROD" "${HTTPD_CONF}-PROD"
 # PHP
-COPY ".docker/php/.${PHP_CONF}" "${PHP_CONF}"
-COPY ".docker/php/.${PHP_CONF}-DEV" "${PHP_CONF}-DEV"
-COPY ".docker/php/.${PHP_CONF}-STAG" "${PHP_CONF}-STAG"
-COPY ".docker/php/.${PHP_CONF}-PROD" "${PHP_CONF}-PROD"
+COPY ".${PHP_CONF}" "${PHP_CONF}"
+COPY ".${PHP_CONF}-DEV" "${PHP_CONF}-DEV"
+COPY ".${PHP_CONF}-STAG" "${PHP_CONF}-STAG"
+COPY ".${PHP_CONF}-PROD" "${PHP_CONF}-PROD"
 
 #########################################################################################################################
 #### CONTAINER ###

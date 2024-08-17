@@ -7,9 +7,9 @@ services:
       context: ./.docker/alpine
     networks:
       backend:
-        ipv4_address: 173.3.20.20
+        ipv4_address: 189.17.17.20
       frontend:
-        ipv4_address: 174.3.20.20
+        ipv4_address: 189.11.11.20
     #ports:
     #  - "hostPort:containerPort"
     volumes:
@@ -30,8 +30,8 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 173.3.20.0/16
-          gateway: 173.3.20.1
+        - subnet: 189.17.17.0/24
+          gateway: 189.17.17.1
   frontend:
     driver: bridge
     name: ${COMPOSE_PREFIX}frontend
@@ -39,5 +39,5 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 174.3.20.0/16
-          gateway: 174.3.20.1
+        - subnet: 189.11.11.0/24
+          gateway: 189.11.11.1

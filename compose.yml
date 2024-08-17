@@ -1,8 +1,8 @@
 services:
-  alpine:
+  alpine3.20:
     image: f4lk0n/fkn:alpine3.20
     container_name: ${COMPOSE_PREFIX}alpine3.20
-    hostname: alpine
+    hostname: alpine3.20
     build:
       context: ./.docker/alpine
     networks:

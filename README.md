@@ -37,9 +37,9 @@ docker compose up -d --build
 ```
 ### Access
 ```bash
-docker compose exec -it alpine /bin/sh
+docker compose exec -it alpine3.20 /bin/sh
 ```
 ### Logs
 ```bash
-docker compose logs alpine
+docker compose logs alpine3.20
 ```
